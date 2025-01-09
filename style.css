@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #0056b3;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky; /* Ensure the navbar remains visible on scroll */
+  top: 0;
+  z-index: 1000; /* Ensure it stays in front of other elements */
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Accessibility and focus states for visibility and keyboard navigation without a mouse */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px dashed #0056b3; /* Visible focus indicator for accessibility */
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%; 
+  height: auto;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/1200x600-banner.png') no-repeat center center/cover;
+  position: relative; /* Necessary for the overlay */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Adds a semi-transparent dark overlay for better text visibility on the background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay with 50% opacity */
+  z-index: 1;
+}
+
+.hero h2, .hero p, .hero .btn {
+  position: relative;
+  z-index: 2; /* Keeps text above the overlay */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for better visibility */
+  color: #f5f5f5; /* Increased contrast against the dark background */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Similar shadow for paragraph */
+  color: #f5f5f5; /* Increased contrast */
+}
+
+.hero .btn {
+  background: #ff6f61;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  z-index: 2; /* Ensure button is on top of the overlay */
+}
+
+.hero .btn:hover {
+  background: #e75b50;
+}
+
+/* Section styling ensure consistent spacing and layout for sections */
+section {
+  padding: 4rem 0; /* Uniform padding for vertical spacing */
+  text-align: center; /* Centers text in all sections */
+}
+
+.services .service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.service {
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+/* About Section */
+.about {
+  background-color: #ffffff;
+}
+
+/* Portfolio Section */
+.portfolio {
+  background-color: #ffffff;
+}
+
+.portfolio-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.portfolio-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+/* Contact Form, accessible and responsive input fields */
+.contact form input,
+.contact form textarea {
+  width: 100%; /* Ensure inputs span the container width */
+  padding: 1rem;
+  margin-bottom: 1rem; /* Spacing between fields */
+  border: 1px solid #ccc; 
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Relative font size for scalability */
+}
+
+}
+
+.contact form button {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.contact form button:hover {
+  background: #003f88;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background: #0056b3;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.testimonial-item {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-item cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+/* Certifications Section */
+.certifications {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certifications li {
+  margin: 0.5rem 0;
+}
+
+/* Our Clients Section */
+.clients {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.clients .client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.clients .client-logo {
+  flex: 1 1 calc(20% - 1rem); /* Adjust size of logos */
+  max-width: 150px;
+  text-align: center;
+}
+
+.clients .client-logo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* Clients Section, highlight client logos with hover effects for interactivity */
+.clients .client-logo img:hover {
+  transform: scale(1.1); /* Slight zoom effect to see interactivity */
+}
+
+
+.clients .client-logo p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
